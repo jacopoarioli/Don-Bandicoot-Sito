@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Titan+One&family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --jungle-green: #2d5a3d;
+    --light-green: #4a8f5e;
+    --bright-green: #6bc47d;
+    --orange: #ff8c42;
+    --bright-orange: #ffa95f;
+    --brown: #8b5a3c;
+    --light-brown: #b8885f;
+    --sky-blue: #87ceeb;
+    --dark-blue: #008f7c;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333333;
+    --yellow: #ffd700;
+    --red: #e74c3c;
+    --purple: #9b59b6;
+}
+
+body {
+    font-family: 'New Rocker', cursive, sans-serif;
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--jungle-green) 100%);
+    color: var(--dark-gray);
+    line-height: 1.6;
+    min-height: 100vh;
+    font-size: 23px;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-weight: normal;
+}
+
+header {
+    background: linear-gradient(to right, var(--jungle-green), var(--brown));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Bangers', cursive;
+    color: var(--orange);
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 3px black;
+    text-stroke: 3px black;
+    paint-order: stroke fill;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    font-family: 'Bangers', cursive;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: var(--orange);
+    transform: translateY(-2px) scale(1.05);
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.hero {
+    background-image: url("./Immagini/Copertina.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: 'Bangers', cursive;
+    font-size: 4rem;
+    color: var(--orange);
+    letter-spacing: 3px;
+    -webkit-text-stroke: 4px black;
+    text-stroke: 4px black;
+    paint-order: stroke fill;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+.hero-subtitle {
+    font-family: 'Titan One', cursive;
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-family: 'Bangers', cursive;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--bright-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.btn-secondary {
+    background: var(--brown);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--light-brown);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.btn-large {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+}
+
+.jungle-decoration {
+    font-size: 5rem;
+    margin-top: 2rem;
+    animation: sway 3s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.features {
+    background: var(--white);
+    padding: 4rem 2rem;
+}
+
+.section-title {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 3px black;
+    text-stroke: 3px black;
+    paint-order: stroke fill;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    
+}
+
+.feature-card {
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 3px solid var(--bright-green);
+
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: var(--orange);
+}
+
+.feature-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+    paint-order: stroke fill;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card p {
+    color: var(--dark-gray);
+    font-size: 22.5px;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--bright-orange) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-section h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 3px black;
+    text-stroke: 3px black;
+    paint-order: stroke fill;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cta-section p {
+    font-family: 'Titan One', cursive;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--brown) 0%, var(--jungle-green) 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 4px black;
+    text-stroke: 4px black;
+    paint-order: stroke fill;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.page-header p {
+    font-family: 'Titan One', cursive;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.content-section {
+    background: var(--white);
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+
+.characters-grid,
+.items-grid,
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    color:#111;
+    
+}
+
+.character-card,
+.item-card,
+.level-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    min-height: 350px;
+}
+
+.level-card img{
+    border-radius: 8px;
+    width: 21rem; 
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+.character-card.hero {
+    background: #bfecfb;
+    border: 3px solid #21b1e2;
+}
+.character-card.hero:hover {
+    background: #5ed3fa;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.character-card.villain {
+    background: #ffcdd2;
+    border: 3px solid var(--red) !important;
+    text-align: center;
+}
+.character-card.villain:hover {
+    background: #fd7986;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.character-avatar img {
+    text-align: center;
+    margin-bottom: 1rem;
+
+    border-radius: 8px;
+
+    width: 18rem;
+    height: fit-content;
+}
+
+.item-icon img {
+
+    border-radius: 8px;
+    width: 18rem;
+    height: fit-content;
+}
+
+
+
+.character-card h3,
+.item-card h3,
+.level-card h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+    paint-order: stroke fill;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.character-role {
+    font-family: 'Titan One', cursive;
+    font-weight: normal;
+    color: var(--jungle-green);
+    font-size: 22px;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.character-stats,
+.item-info,
+.level-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    
+
+    margin-top: auto; 
+    
+    text-align: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.stat,
+.badge {
+    font-family: 'Titan One', cursive;
+    background: #FFF5E1;
+    color: #483C32;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 2px solid #B87333;
+    box-shadow: #98d9f3; 
+    
+}
+
+.item-card.collectible {
+    background-color: #fcefa7;
+    border-color: #ffd900;
+    text-align: center;
+}
+
+.item-card.collectible:hover {
+    background: #fce561;
+
+}
+
+.item-card.crate {
+    border-color: #5c2809;
+    background-color: #ec9a6a;
+    text-align: center;
+}
+
+.item-card.crate:hover {
+    background: #a85d2e;
+    color:#111;
+}
+
+.item-card.life {
+    border-color: #4a8f5e;
+    background-color: #1fff4c9a;
+    text-align: center;
+}
+
+.item-card.life:hover {
+    background: #41ff67; 
+}
+
+.item-card.weapons {
+    border-color: #74542f;
+    background-color: #ffdeb9;
+    text-align: center;
+}
+
+.item-card.weapons:hover {
+    background-color: #d8a468;
+}
+
+.level-card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    border-color: var(--bright-green);
+    height: 100%; 
+    min-height: 500px; 
+}
+
+.level-card .prova {
+    margin-bottom: 15px;
+    text-align: center; 
+}
+
+.level-card .prova img{
+    border-radius: 8px;
+    width: 21rem; 
+    height: fit-content;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.level-card img{
+    
+    border-radius: 8px;
+    width: 21rem; 
+    height: fit-content;
+
+    justify-content: center;
+    align-items: center;
+    display: block; 
+    margin: 0 auto; 
+} 
+
+
+.level-tip {
+    margin-top: auto;
+    
+    padding: 0.8rem;
+    background: var(--bright-green);
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center; 
+    width: 100%; 
+    box-sizing: border-box; 
+    
+}
+
+.story-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.story-chapter {
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid var(--light-green);
+    transition: all 0.3s ease;
+}
+
+.story-chapter:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-number {
+    display: inline-block;
+    background: linear-gradient(to right, var(--light-green), var(--orange));
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.story-chapter h2 {
+    font-family: 'Bangers', cursive;
+    color: var(--orange);
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+    paint-order: stroke fill;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.story-content p {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.story-content ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.story-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.world-description {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+    border-left: 4px solid var(--bright-green);
+}
+
+.world-description h4 {
+    font-family: 'Bangers', cursive;
+    color: var(--orange);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+    paint-order: stroke fill;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.story-end {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--orange);
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.story-extra {
+    background: linear-gradient(135deg, var(--bright-green) 0%, var(--light-green) 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+}
+
+.story-extra h2 {
+    font-family: 'Bangers', cursive;
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 3px black;
+    text-stroke: 3px black;
+    paint-order: stroke fill;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.trivia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.trivia-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.trivia-card h4 {
+    font-family: 'Bangers', cursive;
+    color: var(--orange);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+    paint-order: stroke fill;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.trivia-card p {
+    color: var(--dark-gray);
+    font-size: 1rem;
+}
+
+.beach-card img{
+    border-radius: 20px;
+    width: 50rem;
+    height: fit-content;
+
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    font-family: 'Titan One', cursive;
+    background: var(--jungle-green);
+    color: rgb(242, 242, 242);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 18px;
+
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: var(--jungle-green);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .characters-grid,
+    .items-grid,
+    .levels-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--orange);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: var(--bright-orange);
+    transform: translateY(-5px);
+}  

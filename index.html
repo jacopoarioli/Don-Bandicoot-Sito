@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Don Bandicoot Wiki - The Mulinex Revenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">🦊 Don Bandicoot Wiki</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="storia.html">Storia</a></li>
+                    <li><a href="livelli.html">Livelli</a></li>
+                    <li><a href="personaggi.html">Personaggi</a></li>
+                    <li><a href="oggetti.html">Oggetti</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Benvenuto nella Wiki di Don Bandicoot!</h1>
+                <p class="hero-subtitle">Qui troverai tutto ciò che devi sapere su questa avventura! </p>
+                <div class="hero-buttons">
+                    <a href="personaggi.html" class="btn btn-primary">Scopri i Personaggi</a>
+                    <a href="storia.html" class="btn btn-secondary">Leggi la Storia</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="jungle-decoration">🌴</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Esplora la Wiki</h2>
+                <div class="features-grid">
+                    <div class="feature-card" onclick="location.href='personaggi.html'">
+                        <div class="feature-icon">👥</div>
+                        <h3>Personaggi</h3>
+                        <p>Conosci tutti i personaggi, eroi e nemici che fanno parte di questa avvetura!</p>
+                    </div>
+                    <div class="feature-card" onclick="location.href='oggetti.html'">
+                        <div class="feature-icon">🍎</div>
+                        <h3>Oggetti</h3>
+                        <p>Scopri tutti gli oggetti presenti nel gioco!</p>
+                    </div>
+                    <div class="feature-card" onclick="location.href='livelli.html'">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Livelli</h3>
+                        <p>Esplora tutti i livelli fino alla boss fight!</p>
+                    </div>
+                    <div class="feature-card" onclick="location.href='storia.html'">
+                        <div class="feature-icon">📖</div>
+                        <h3>Storia</h3>
+                        <p>Scopri la trama completa del nuovo capitolo The Mulinex Revenge! </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto all'avventura?</h2>
+                <p>Immergiti nel mondo seicentesco insieme a Don e i suoi amici</p>
+                <a href="personaggi.html" class="btn btn-large">Inizia l'Avventura</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Don Bandicoot Wiki - Fan Wiki ufficiale</p>
+            <p>🌴 Creato  dai migliori alunni della 4BI 🌴</p>
+        </div>
+    </footer>
+
+    <audio id="background-audio" autoplay loop muted style="display: none;">
+        <source src="Homesound.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
